@@ -3,9 +3,9 @@ import { render, fireEvent } from "@testing-library/react";
 import BoxList from "./BoxList";
 
 function addBox(boxList, height="50px", width="50px", color="cyan"){
-    const heightInput = boxList.getByLabelText("Height");
-    const widthInput = boxList.getByLabelText("Width");
-    const backgroundInput = boxList.getByLabelText("Background Color");
+    const heightInput = boxList.getByLabelText("Height:");
+    const widthInput = boxList.getByLabelText("Width:");
+    const backgroundInput = boxList.getByLabelText("Background Color:");
     fireEvent.change(backgroundInput, {target:{value:color}});
     fireEvent.change(widthInput, {target:{value:width}});
     fireEvent.change(heightInput, {target:{value:height}});
